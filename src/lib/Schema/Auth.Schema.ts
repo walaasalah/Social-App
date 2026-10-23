@@ -5,12 +5,12 @@ export const registerschema = z
     name: z
       .string()
       .nonempty("name is requied")
-      .min(3, "min char is 3")
-      .max(10, "max char is 10"),
+      .min(10, "min char is 10")
+      .max(20, "max char is 20"),
     username: z
       .string()
       .nonempty("Username is required")
-      .min(3, "Username must be at least 3 characters")
+      .min(10, "Username must be at least 10 characters")
       .max(30, "Username must be at most 30 characters")
       .regex(
         /^[a-z0-9_]+$/,
