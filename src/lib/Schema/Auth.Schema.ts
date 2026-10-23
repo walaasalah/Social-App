@@ -6,7 +6,7 @@ export const registerschema = z
       .string()
       .nonempty("name is requied")
       .min(10, "min char is 10")
-      .max(20, "max char is 20"),
+      .max(30, "max char is 30"),
     username: z
       .string()
       .nonempty("Username is required")
