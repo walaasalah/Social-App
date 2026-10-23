@@ -1,0 +1,12 @@
+import { useContext, type ReactNode } from "react";
+import { Navigate } from "react-router";
+import { TokenContext } from "../Context/TokenContext";
+
+export default function AppProtectedRoute({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const token = useContext(TokenContext)?.Token;
+  return token ? children : <Navigate to="/auth/login" replace />;
+}
